@@ -8,8 +8,8 @@ import AddUpdateForm from "./AddUpdateForm";
 
 console.log(JSON.stringify(process.env));
 
-const isProduction = process.env.REACT_ENV ? process.env.REACT_ENV : "local";
-const url = isProduction ? process.env.PRODUCTION_URL : "http://localhost:5000";
+const isProduction = process.env.NODE_ENV ? process.env.NODE_ENV : "local";
+const url = isProduction ? process.env.REACT_APP_PRODUCTION_URL : "http://localhost:5000";
 
 const NotesView = () => {
 

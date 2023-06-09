@@ -1,8 +1,8 @@
 import axios from "axios";
 import { NoteModal } from "../models/NoteModal";
 
-const isProduction = process.env.REACT_ENV ? process.env.REACT_ENV : "local";
-const url = isProduction ? process.env.PRODUCTION_URL : "http://localhost:5000";
+const isProduction = process.env.NODE_ENV ? process.env.NODE_ENV : "local";
+const url = isProduction ? process.env.REACT_APP_PRODUCTION_URL : "http://localhost:5000";
 
 export const deleteNote = async (noteId: string) => {
     await axios.delete(`${url}/api/notes` + noteId);
