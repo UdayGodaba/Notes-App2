@@ -5,9 +5,7 @@ import cors from "cors";
 import morgan from "morgan";
 
 const app = express();
-app.use(cors({
-    origin: "https://notes-app2-qcp6378ic-udaygodaba.vercel.app"
-}));
+app.use(cors());
 app.use(morgan("dev"))
 app.use(express.json());
 
