@@ -6,7 +6,7 @@ import morgan from "morgan";
 
 const app = express();
 app.use(cors({
-    origin: "https://notes-app2-2uq9fuexw-udaygodaba.vercel.app"
+    origin: "https://notes-app2-qcp6378ic-udaygodaba.vercel.app"
 }));
 app.use(morgan("dev"))
 app.use(express.json());
