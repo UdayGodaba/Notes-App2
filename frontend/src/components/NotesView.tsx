@@ -6,6 +6,8 @@ import NotesList from "./NotesList";
 import { deleteNote } from "../network/Note_api";
 import AddUpdateForm from "./AddUpdateForm";
 
+const isProduction = process.env.REACT_ENV ? process.env.REACT_ENV : "local";
+const url = isProduction ? process.env.PRODUCTION_URL : "http://localhost:5000";
 
 const NotesView = () => {
 
@@ -16,7 +18,7 @@ const NotesView = () => {
 
     useEffect(() => {
         async function loadNotes() {
-            const res = await axios.get("http://localhost:5000/api/notes");
+            const res = await axios.get(`${url}/api/notes`);
             setNotes(res.data);
         }
         loadNotes();
