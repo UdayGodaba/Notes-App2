@@ -6,6 +6,8 @@ import NotesList from "./NotesList";
 import { deleteNote } from "../network/Note_api";
 import AddUpdateForm from "./AddUpdateForm";
 
+console.log(JSON.stringify(process.env));
+
 const isProduction = process.env.REACT_ENV ? process.env.REACT_ENV : "local";
 const url = isProduction ? process.env.PRODUCTION_URL : "http://localhost:5000";
 
