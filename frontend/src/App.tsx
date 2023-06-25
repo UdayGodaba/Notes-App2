@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setView(false)
-    }, 3000)
+    }, 5000)
   }, []);
 
   return (
