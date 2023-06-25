@@ -1,14 +1,16 @@
 import { Alert } from 'react-bootstrap';
 import Header from './components/Header';
 import NotesView from './components/NotesView';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
 
   const [view, setView] = useState(true);
-  setTimeout(() => {
-    setView(false);
-  }, 2000);
+  useEffect(() => {
+    setTimeout(() => {
+      setView(false)
+    }, 3000)
+  }, []);
 
   return (
     <>
