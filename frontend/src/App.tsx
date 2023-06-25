@@ -6,7 +6,9 @@ function App() {
 
   return (
     <>
-      <Alert>Please do refresh few times if notes did not appear as backend is hosted on a free hosting service it is not up always</Alert>
+      setTimeout(function () {
+        <Alert>Please do refresh few times if notes did not appear as backend is hosted on a free hosting service it is not up always</Alert>
+      }, 2000);
       <Header />
       <NotesView />
     </>
